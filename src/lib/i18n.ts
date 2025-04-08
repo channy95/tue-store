@@ -1,4 +1,3 @@
-
 export type Language = 'ko' | 'en' | 'ja';
 
 export const translations = {
@@ -30,7 +29,7 @@ export const translations = {
     melancholyDescription: "감성적인 순간을 위한 넥타이",
     
     // 브랜드 스토리 섹션
-    aboutTitle: "클래식은 이제 그만,\n캐주얼한 넥타이의 시대",
+    aboutTitle: "TIE+U",
     aboutStory: `유독 넥타이를 매는 날엔,
 기분이 조금 더 또렷해지고 마음은 한 톤 더 올라감을 느끼신 적 있으신가요?
 
@@ -96,7 +95,7 @@ export const translations = {
     melancholyDescription: "Neckties for emotional moments",
     
     // Brand Story Section
-    aboutTitle: "Forget Classic,\nWelcome to the Era of Casual Neckties",
+    aboutTitle: "TIE+U",
     aboutStory: `Have you ever noticed how on days when you wear a tie,
 your mood becomes clearer and your spirit lifts just a bit more?
 
@@ -162,7 +161,7 @@ neckties for your emotions.`,
     melancholyDescription: "感性的な瞬間のためのネクタイ",
     
     // ブランドストーリーセクション
-    aboutTitle: "クラシックは終わり、\nカジュアルネクタイの時代へ",
+    aboutTitle: "TIE+U",
     aboutStory: `ネクタイを締める日には、
 気分がより鮮明になり、心がワントーン上がるのを感じたことはありますか？
 
