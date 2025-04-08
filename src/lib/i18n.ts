@@ -9,6 +9,7 @@ export const translations = {
     relaxed: "편안함",
     melancholy: "우울",
     brand: "브랜드",
+    lookbook: "룩북",
     
     // 헤더/푸터
     login: "로그인",
@@ -74,6 +75,7 @@ export const translations = {
     relaxed: "Relaxed",
     melancholy: "Melancholy",
     brand: "Brand",
+    lookbook: "Lookbook",
     
     // Header/Footer
     login: "Login",
@@ -139,6 +141,7 @@ neckties for your emotions.`,
     relaxed: "リラックス",
     melancholy: "メランコリー",
     brand: "ブランド",
+    lookbook: "ルックブック",
     
     // ヘッダー/フッター
     login: "ログイン",
