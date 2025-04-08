@@ -1,13 +1,22 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingBag, Menu, X, Search } from 'lucide-react';
+import { ShoppingBag, Menu, X, Search, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { 
+  Select, 
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue 
+} from '@/components/ui/select';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [cartItemCount, setCartItemCount] = useState(0);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,15 +44,33 @@ const Header = () => {
         
         {/* 데스크탑 네비게이션 */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/products/all" className="font-medium link-underline">전체 제품</Link>
-          <Link to="/emotion/excited" className="font-medium link-underline">기대</Link>
-          <Link to="/emotion/relaxed" className="font-medium link-underline">편안함</Link>
-          <Link to="/emotion/melancholy" className="font-medium link-underline">우울</Link>
-          <Link to="/about" className="font-medium link-underline">브랜드</Link>
+          <Link to="/products/all" className="font-medium link-underline">{t('allProducts')}</Link>
+          <Link to="/emotion/excited" className="font-medium link-underline">{t('excited')}</Link>
+          <Link to="/emotion/relaxed" className="font-medium link-underline">{t('relaxed')}</Link>
+          <Link to="/emotion/melancholy" className="font-medium link-underline">{t('melancholy')}</Link>
+          <Link to="/about" className="font-medium link-underline">{t('brand')}</Link>
         </nav>
         
         {/* 헤더 우측 아이콘 */}
         <div className="flex items-center space-x-4">
+          {/* 언어 선택 */}
+          <Select
+            value={language}
+            onValueChange={(value) => setLanguage(value as 'ko' | 'en' | 'ja')}
+          >
+            <SelectTrigger className="w-[70px] h-8 border-none bg-transparent">
+              <div className="flex items-center">
+                <Globe size={16} className="mr-1" />
+                <span className="uppercase">{language}</span>
+              </div>
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="ko">한국어</SelectItem>
+              <SelectItem value="en">English</SelectItem>
+              <SelectItem value="ja">日本語</SelectItem>
+            </SelectContent>
+          </Select>
+          
           <button className="p-1">
             <Search size={20} />
           </button>
@@ -84,40 +111,65 @@ const Header = () => {
               className="font-medium py-2 border-b border-muted"
               onClick={() => setIsMenuOpen(false)}
             >
-              전체 제품
+              {t('allProducts')}
             </Link>
             <Link 
               to="/emotion/excited" 
               className="font-medium py-2 border-b border-muted"
               onClick={() => setIsMenuOpen(false)}
             >
-              기대
+              {t('excited')}
             </Link>
             <Link 
               to="/emotion/relaxed" 
               className="font-medium py-2 border-b border-muted"
               onClick={() => setIsMenuOpen(false)}
             >
-              편안함
+              {t('relaxed')}
             </Link>
             <Link 
               to="/emotion/melancholy" 
               className="font-medium py-2 border-b border-muted"
               onClick={() => setIsMenuOpen(false)}
             >
-              우울
+              {t('melancholy')}
             </Link>
             <Link 
               to="/about" 
-              className="font-medium py-2"
+              className="font-medium py-2 border-b border-muted"
               onClick={() => setIsMenuOpen(false)}
             >
-              브랜드
+              {t('brand')}
             </Link>
+            
+            {/* 모바일 메뉴 내 언어 선택 */}
+            <div className="py-2 border-b border-muted">
+              <p className="font-medium mb-2">언어 선택 / Language / 言語</p>
+              <div className="flex space-x-4">
+                <button 
+                  onClick={() => setLanguage('ko')} 
+                  className={`px-3 py-1 rounded ${language === 'ko' ? 'bg-tue-400 text-white' : 'bg-muted'}`}
+                >
+                  한국어
+                </button>
+                <button 
+                  onClick={() => setLanguage('en')} 
+                  className={`px-3 py-1 rounded ${language === 'en' ? 'bg-tue-400 text-white' : 'bg-muted'}`}
+                >
+                  English
+                </button>
+                <button 
+                  onClick={() => setLanguage('ja')} 
+                  className={`px-3 py-1 rounded ${language === 'ja' ? 'bg-tue-400 text-white' : 'bg-muted'}`}
+                >
+                  日本語
+                </button>
+              </div>
+            </div>
           </nav>
           
           <div className="mt-auto space-y-4">
-            <Button className="w-full btn-primary">로그인</Button>
+            <Button className="w-full btn-primary">{t('login')}</Button>
           </div>
         </div>
       )}

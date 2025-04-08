@@ -1,17 +1,21 @@
 
+import { useLanguage } from '@/contexts/LanguageContext';
+
 const lookbookImages = [
-  "public/lovable-uploads/ca0ac596-83ec-460f-993a-a626820f8e6a.png",
-  "public/lovable-uploads/6b51739f-0dd1-444e-8ead-c6628e31209c.png",
+  "/lovable-uploads/ca0ac596-83ec-460f-993a-a626820f8e6a.png",
+  "/lovable-uploads/6b51739f-0dd1-444e-8ead-c6628e31209c.png",
 ]
 
 const Lookbook = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="section-padding bg-beige-100">
       <div className="container-wide">
         <div className="text-center mb-16">
-          <h2 className="heading-md mb-4">룩북</h2>
+          <h2 className="heading-md mb-4">{t('lookbookTitle')}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            TUE 넥타이로 완성한 다양한 스타일링을 만나보세요.
+            {t('lookbookSubtitle')}
           </p>
         </div>
         
@@ -20,7 +24,7 @@ const Lookbook = () => {
             <div key={index} className="overflow-hidden rounded-lg">
               <img 
                 src={image} 
-                alt={`TUE 룩북 이미지 ${index + 1}`} 
+                alt={`TUE ${t('lookbookTitle')} ${index + 1}`} 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
