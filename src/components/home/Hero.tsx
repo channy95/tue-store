@@ -51,7 +51,7 @@ const Hero = () => {
       {/* 텍스트 오버레이 */}
       <div className="absolute inset-0 flex flex-col justify-center items-center px-6">
         <div className="max-w-lg text-center">
-          <h1 className="tue-logo text-white mb-8 md:mb-10">
+          <h1 className="tue-logo text-white mb-8 md:mb-10 uppercase">
             {t('heroTitle')}
           </h1>
           <p className="text-white/90 text-lg md:text-xl mb-10 font-light max-w-md mx-auto whitespace-pre-line">
