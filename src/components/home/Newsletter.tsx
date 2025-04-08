@@ -3,23 +3,21 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
 
+const googleFormUrl = "https://docs.google.com/forms/d/1xqDPG0HLXtL7dMcw8QoQ-kH--LluLs54pQd07IkLCi0/edit?usp=forms_home&ths=true";
+
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
-    
-    // 실제 API 연동이 아닌 가상의 구독 처리
-    setTimeout(() => {
-      toast({
-        title: "구독이 완료되었습니다!",
-        description: "TUE의 새로운 소식을 이메일로 받아보실 수 있습니다.",
-      });
-      setEmail('');
-      setIsLoading(false);
-    }, 1000);
+    // Instead of the mock submission, redirect to the Google Form
+    window.open(googleFormUrl, '_blank', 'noopener,noreferrer');
+    setEmail('');
+    toast({
+      title: "리디렉션 중입니다.",
+      description: "Google Form으로 이동합니다.",
+    });
   };
 
   return (
@@ -52,6 +50,14 @@ const Newsletter = () => {
           <p className="text-sm mt-4 text-white/70">
             구독은 언제든지 취소할 수 있습니다. 개인정보는 소중히 보호됩니다.
           </p>
+          
+          <div className="mt-6">
+            <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-white text-white hover:bg-white/10">
+                구독 폼으로 바로가기
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>

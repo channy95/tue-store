@@ -3,13 +3,14 @@ import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
 
 const heroImages = [
   "/lovable-uploads/30042ce1-9d09-458d-8c21-f1c3a5c52964.png",
   "/lovable-uploads/ca0ac596-83ec-460f-993a-a626820f8e6a.png",
   "/lovable-uploads/ca45efef-67d4-4925-b2f9-4da0090614d6.png",
 ];
+
+const googleFormUrl = "https://docs.google.com/forms/d/1xqDPG0HLXtL7dMcw8QoQ-kH--LluLs54pQd07IkLCi0/edit?usp=forms_home&ths=true";
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -54,17 +55,17 @@ const Hero = () => {
             {t('heroSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link to="/products">
+            <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
               <Button className="btn-primary flex items-center group min-w-[180px]">
                 {t('heroButtonText')} 
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
               </Button>
-            </Link>
-            <Link to="/about">
+            </a>
+            <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="btn-outline min-w-[180px]">
                 {t('aboutButtonText')}
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
