@@ -39,29 +39,29 @@ const Hero = () => {
               alt={`TUE ${t('heroAltText')} ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-30"></div>
           </div>
         ))}
       </div>
 
       {/* 텍스트 오버레이 */}
-      <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-20 lg:px-32">
-        <div className="max-w-lg">
-          <h1 className="text-white heading-lg mb-4 md:mb-6">
+      <div className="absolute inset-0 flex flex-col justify-center items-center px-6">
+        <div className="max-w-lg text-center">
+          <h1 className="text-white heading-lg mb-8 md:mb-10">
             {t('heroTitle')}
           </h1>
-          <p className="text-white/90 text-lg md:text-xl mb-8 font-light">
+          <p className="text-white/90 text-lg md:text-xl mb-10 font-light max-w-md mx-auto">
             {t('heroSubtitle')}
           </p>
-          <div className="flex space-x-4">
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Link to="/products">
-              <Button className="btn-primary flex items-center group">
+              <Button className="btn-primary flex items-center group min-w-[180px]">
                 {t('heroButtonText')} 
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
               </Button>
             </Link>
             <Link to="/about">
-              <Button variant="outline" className="btn-outline text-white border-white hover:bg-white hover:text-tue-400">
+              <Button variant="outline" className="btn-outline min-w-[180px]">
                 {t('aboutButtonText')}
               </Button>
             </Link>
