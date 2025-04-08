@@ -17,8 +17,8 @@ export const translations = {
     search: "검색",
     
     // 홈페이지
-    heroTitle: "감정을 표현하는\n새로운 방식",
-    heroSubtitle: "클래식한 넥타이는 이제 그만.\nTUE와 함께 패션 액세서리로서의 넥타이를 재발견하세요.",
+    heroTitle: "TUE",
+    heroSubtitle: "내 기분은 내가 정해\n오늘은 TUE로 할래",
     heroButtonText: "컬렉션 보기",
     heroAltText: "넥타이 이미지",
     
@@ -83,8 +83,8 @@ export const translations = {
     search: "Search",
     
     // Homepage
-    heroTitle: "A New Way to Express\nYour Emotions",
-    heroSubtitle: "Forget classic ties.\nRediscover neckties as fashion accessories with TUE.",
+    heroTitle: "TUE",
+    heroSubtitle: "I choose my mood\nToday I'll go with TUE",
     heroButtonText: "View Collection",
     heroAltText: "Necktie image",
     
@@ -149,8 +149,8 @@ neckties for your emotions.`,
     search: "検索",
     
     // ホームページ
-    heroTitle: "感情を表現する\n新しい方法",
-    heroSubtitle: "クラシックなネクタイはもう終わり。\nTUEとファッションアクセサリーとしてのネクタイを再発見しましょう。",
+    heroTitle: "TUE",
+    heroSubtitle: "気分は私が決める\n今日はTUEにしよう",
     heroButtonText: "コレクションを見る",
     heroAltText: "ネクタイの画像",
     

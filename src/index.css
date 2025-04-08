@@ -106,6 +106,14 @@
   .link-underline {
     @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all hover:after:w-full;
   }
+  
+  .font-helvetica {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  .tue-logo {
+    @apply font-helvetica text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter;
+  }
 }
 
 @layer utilities {

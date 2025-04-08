@@ -18,6 +18,8 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
+const googleFormUrl = "https://docs.google.com/forms/d/1xqDPG0HLXtL7dMcw8QoQ-kH--LluLs54pQd07IkLCi0/edit?usp=forms_home&ths=true";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,24 +55,24 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56 bg-black/90 backdrop-blur-md border-white/20 text-white">
               <DropdownMenuItem asChild>
-                <Link to="/products" className="text-white hover:bg-white/20 cursor-pointer">
+                <a href={googleFormUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:bg-white/20 cursor-pointer">
                   {t('allProducts')}
-                </Link>
+                </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/emotion/excited" className="text-white hover:bg-white/20 cursor-pointer">
+                <a href={googleFormUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:bg-white/20 cursor-pointer">
                   {t('excited')}
-                </Link>
+                </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/emotion/relaxed" className="text-white hover:bg-white/20 cursor-pointer">
+                <a href={googleFormUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:bg-white/20 cursor-pointer">
                   {t('relaxed')}
-                </Link>
+                </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/emotion/melancholy" className="text-white hover:bg-white/20 cursor-pointer">
+                <a href={googleFormUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:bg-white/20 cursor-pointer">
                   {t('melancholy')}
-                </Link>
+                </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link to="/about" className="text-white hover:bg-white/20 cursor-pointer">
@@ -78,9 +80,9 @@ const Header = () => {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/lookbook" className="text-white hover:bg-white/20 cursor-pointer">
+                <a href={googleFormUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:bg-white/20 cursor-pointer">
                   {t('lookbook')}
-                </Link>
+                </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -139,34 +141,42 @@ const Header = () => {
           </div>
           
           <nav className="flex flex-col space-y-6 text-lg">
-            <Link 
-              to="/products" 
+            <a 
+              href={googleFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="font-medium py-2 border-b border-white/20 text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('allProducts')}
-            </Link>
-            <Link 
-              to="/emotion/excited" 
+            </a>
+            <a 
+              href={googleFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="font-medium py-2 border-b border-white/20 text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('excited')}
-            </Link>
-            <Link 
-              to="/emotion/relaxed" 
+            </a>
+            <a 
+              href={googleFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="font-medium py-2 border-b border-white/20 text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('relaxed')}
-            </Link>
-            <Link 
-              to="/emotion/melancholy" 
+            </a>
+            <a 
+              href={googleFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="font-medium py-2 border-b border-white/20 text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('melancholy')}
-            </Link>
+            </a>
             <Link 
               to="/about" 
               className="font-medium py-2 border-b border-white/20 text-white"
@@ -174,13 +184,15 @@ const Header = () => {
             >
               {t('brand')}
             </Link>
-            <Link 
-              to="/lookbook" 
+            <a 
+              href={googleFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="font-medium py-2 border-b border-white/20 text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('lookbook')}
-            </Link>
+            </a>
             
             {/* 모바일 메뉴 내 언어 선택 */}
             <div className="py-2 border-b border-white/20">

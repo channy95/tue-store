@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -8,6 +9,8 @@ const heroImages = [
   "/lovable-uploads/30042ce1-9d09-458d-8c21-f1c3a5c52964.png",
   "/lovable-uploads/ca0ac596-83ec-460f-993a-a626820f8e6a.png",
   "/lovable-uploads/ca45efef-67d4-4925-b2f9-4da0090614d6.png",
+  "/lovable-uploads/040fa192-cc89-4200-b5fb-abc404ca067f.png",
+  "/lovable-uploads/e66e6323-b419-4b12-a646-08e4686f4921.png",
 ];
 
 const googleFormUrl = "https://docs.google.com/forms/d/1xqDPG0HLXtL7dMcw8QoQ-kH--LluLs54pQd07IkLCi0/edit?usp=forms_home&ths=true";
@@ -48,24 +51,24 @@ const Hero = () => {
       {/* 텍스트 오버레이 */}
       <div className="absolute inset-0 flex flex-col justify-center items-center px-6">
         <div className="max-w-lg text-center">
-          <h1 className="text-white heading-lg mb-8 md:mb-10">
+          <h1 className="tue-logo text-white mb-8 md:mb-10">
             {t('heroTitle')}
           </h1>
-          <p className="text-white/90 text-lg md:text-xl mb-10 font-light max-w-md mx-auto">
+          <p className="text-white/90 text-lg md:text-xl mb-10 font-light max-w-md mx-auto whitespace-pre-line">
             {t('heroSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
+            <Link to="/products">
               <Button className="btn-primary flex items-center group min-w-[180px]">
                 {t('heroButtonText')} 
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
               </Button>
-            </a>
-            <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
+            </Link>
+            <Link to="/about">
               <Button variant="outline" className="btn-outline min-w-[180px]">
                 {t('aboutButtonText')}
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

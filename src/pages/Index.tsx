@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/home/Hero';
+import Newsletter from '@/components/home/Newsletter';
+import AboutSection from '@/components/home/AboutSection';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
@@ -25,6 +27,8 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <Hero />
+        <AboutSection />
+        <Newsletter />
       </main>
       <Footer />
     </div>
