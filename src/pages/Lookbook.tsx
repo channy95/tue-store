@@ -2,10 +2,10 @@
 import { useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import Hero from '@/components/home/Hero';
+import LookbookSection from '@/components/home/Lookbook';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const Index = () => {
+const Lookbook = () => {
   const { language } = useLanguage();
   
   useEffect(() => {
@@ -15,20 +15,20 @@ const Index = () => {
 
   // 언어가 변경되면 타이틀 업데이트
   useEffect(() => {
-    document.title = language === 'ko' ? 'TUE - 감정을 표현하는 넥타이' : 
-                     language === 'en' ? 'TUE - Ties That Express Emotions' : 
-                     'TUE - 感情を表現するネクタイ';
+    document.title = language === 'ko' ? 'TUE - 룩북' : 
+                    language === 'en' ? 'TUE - Lookbook' : 
+                    'TUE - ルックブック';
   }, [language]);
 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-1">
-        <Hero />
+      <main className="flex-1 pt-20">
+        <LookbookSection />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Lookbook;

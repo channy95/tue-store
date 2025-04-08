@@ -16,9 +16,10 @@ export const translations = {
     search: "검색",
     
     // 홈페이지
-    heroTitle: "감정을 표현하는 새로운 방식",
-    heroSubtitle: "당신의 마음을 담은 넥타이",
+    heroTitle: "감정을 표현하는\n새로운 방식",
+    heroSubtitle: "클래식한 넥타이는 이제 그만.\nTUE와 함께 패션 액세서리로서의 넥타이를 재발견하세요.",
     heroButtonText: "컬렉션 보기",
+    heroAltText: "넥타이 이미지",
     
     // 감정 섹션
     emotionSectionTitle: "당신의 감정을 표현하세요",
@@ -52,6 +53,9 @@ export const translations = {
     featuredProductsTitle: "인기 제품",
     featuredProductsSubtitle: "가장 사랑받는 TUE의 넥타이",
     viewProduct: "제품 보기",
+    viewAllProducts: "전체 제품 보기",
+    prevProduct: "이전 제품",
+    nextProduct: "다음 제품",
     
     // 룩북 섹션
     lookbookTitle: "룩북",
@@ -77,9 +81,10 @@ export const translations = {
     search: "Search",
     
     // Homepage
-    heroTitle: "A New Way to Express Your Emotions",
-    heroSubtitle: "Neckties That Reflect Your Feelings",
+    heroTitle: "A New Way to Express\nYour Emotions",
+    heroSubtitle: "Forget classic ties.\nRediscover neckties as fashion accessories with TUE.",
     heroButtonText: "View Collection",
+    heroAltText: "Necktie image",
     
     // Emotion Section
     emotionSectionTitle: "Express Your Emotions",
@@ -113,6 +118,9 @@ neckties for your emotions.`,
     featuredProductsTitle: "Popular Products",
     featuredProductsSubtitle: "Most loved neckties from TUE",
     viewProduct: "View Product",
+    viewAllProducts: "View All Products",
+    prevProduct: "Previous Product",
+    nextProduct: "Next Product",
     
     // Lookbook Section
     lookbookTitle: "Lookbook",
@@ -138,9 +146,10 @@ neckties for your emotions.`,
     search: "検索",
     
     // ホームページ
-    heroTitle: "感情を表現する新しい方法",
-    heroSubtitle: "あなたの気持ちを映すネクタイ",
+    heroTitle: "感情を表現する\n新しい方法",
+    heroSubtitle: "クラシックなネクタイはもう終わり。\nTUEとファッションアクセサリーとしてのネクタイを再発見しましょう。",
     heroButtonText: "コレクションを見る",
+    heroAltText: "ネクタイの画像",
     
     // 感情セクション
     emotionSectionTitle: "あなたの感情を表現しましょう",
@@ -174,6 +183,9 @@ neckties for your emotions.`,
     featuredProductsTitle: "人気製品",
     featuredProductsSubtitle: "TUEで最も愛されているネクタイ",
     viewProduct: "製品を見る",
+    viewAllProducts: "全ての製品を見る",
+    prevProduct: "前の製品",
+    nextProduct: "次の製品",
     
     // ルックブックセクション
     lookbookTitle: "ルックブック",
