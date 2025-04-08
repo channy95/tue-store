@@ -27,6 +27,11 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleCollectionClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open(googleFormUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
       {/* 이미지 슬라이더 */}
@@ -58,12 +63,13 @@ const Hero = () => {
             {t('heroSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link to="/products">
-              <Button className="btn-primary flex items-center group min-w-[180px]">
-                {t('heroButtonText')} 
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
-              </Button>
-            </Link>
+            <Button 
+              className="btn-primary flex items-center group min-w-[180px]"
+              onClick={handleCollectionClick}
+            >
+              {t('heroButtonText')} 
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+            </Button>
             <Link to="/about">
               <Button variant="outline" className="btn-outline min-w-[180px]">
                 {t('aboutButtonText')}
