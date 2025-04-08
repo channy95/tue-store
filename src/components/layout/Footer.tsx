@@ -1,8 +1,76 @@
 
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Twitter } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
+  const { language } = useLanguage();
+  
+  const footerText = {
+    ko: {
+      brandDesc: "클래식한 넥타이는 이제 그만. 캐주얼하게 패션 아이템으로 즐기는 새로운 넥타이 문화를 만들어갑니다.",
+      shopping: "쇼핑",
+      allProducts: "전체 제품",
+      excited: "기대",
+      relaxed: "편안함",
+      melancholy: "우울",
+      support: "고객지원",
+      contact: "문의하기",
+      shipping: "배송 안내",
+      returns: "교환 및 반품",
+      faq: "자주 묻는 질문",
+      company: "회사",
+      about: "브랜드 소개",
+      stores: "매장 안내",
+      privacy: "개인정보처리방침",
+      terms: "이용약관",
+      rights: "© " + new Date().getFullYear() + " TUE. All rights reserved.",
+      location: "대한민국 & 일본"
+    },
+    en: {
+      brandDesc: "Classic neckties are over. We're creating a new necktie culture to enjoy casually as a fashion item.",
+      shopping: "Shopping",
+      allProducts: "All Products",
+      excited: "Excited",
+      relaxed: "Relaxed",
+      melancholy: "Melancholy",
+      support: "Customer Support",
+      contact: "Contact Us",
+      shipping: "Shipping",
+      returns: "Returns & Exchanges",
+      faq: "FAQ",
+      company: "Company",
+      about: "About Brand",
+      stores: "Store Locations",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+      rights: "© " + new Date().getFullYear() + " TUE. All rights reserved.",
+      location: "Korea & Japan"
+    },
+    ja: {
+      brandDesc: "クラシックなネクタイはもう終わり。カジュアルにファッションアイテムとして楽しむ新しいネクタイ文化を作ります。",
+      shopping: "ショッピング",
+      allProducts: "全ての製品",
+      excited: "期待",
+      relaxed: "リラックス",
+      melancholy: "メランコリー",
+      support: "カスタマーサポート",
+      contact: "お問い合わせ",
+      shipping: "配送案内",
+      returns: "交換・返品",
+      faq: "よくある質問",
+      company: "会社",
+      about: "ブランド紹介",
+      stores: "店舗案内",
+      privacy: "プライバシーポリシー",
+      terms: "利用規約",
+      rights: "© " + new Date().getFullYear() + " TUE. All rights reserved.",
+      location: "韓国 & 日本"
+    }
+  };
+  
+  const text = footerText[language];
+
   return (
     <footer className="bg-muted pt-16 pb-10">
       <div className="container-wide">
@@ -13,7 +81,7 @@ const Footer = () => {
               TUE
             </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">
-              클래식한 넥타이는 이제 그만. 캐주얼하게 패션 아이템으로 즐기는 새로운 넥타이 문화를 만들어갑니다.
+              {text.brandDesc}
             </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-tue-400 transition-colors">
@@ -30,26 +98,26 @@ const Footer = () => {
 
           {/* 쇼핑 */}
           <div className="lg:col-span-1">
-            <h3 className="font-bold text-lg mb-4">쇼핑</h3>
+            <h3 className="font-bold text-lg mb-4">{text.shopping}</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/products/all" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  전체 제품
+                  {text.allProducts}
                 </Link>
               </li>
               <li>
                 <Link to="/emotion/excited" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  기대
+                  {text.excited}
                 </Link>
               </li>
               <li>
                 <Link to="/emotion/relaxed" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  편안함
+                  {text.relaxed}
                 </Link>
               </li>
               <li>
                 <Link to="/emotion/melancholy" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  우울
+                  {text.melancholy}
                 </Link>
               </li>
             </ul>
@@ -57,26 +125,26 @@ const Footer = () => {
 
           {/* 고객지원 */}
           <div className="lg:col-span-1">
-            <h3 className="font-bold text-lg mb-4">고객지원</h3>
+            <h3 className="font-bold text-lg mb-4">{text.support}</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  문의하기
+                  {text.contact}
                 </Link>
               </li>
               <li>
                 <Link to="/shipping" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  배송 안내
+                  {text.shipping}
                 </Link>
               </li>
               <li>
                 <Link to="/returns" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  교환 및 반품
+                  {text.returns}
                 </Link>
               </li>
               <li>
                 <Link to="/faq" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  자주 묻는 질문
+                  {text.faq}
                 </Link>
               </li>
             </ul>
@@ -84,26 +152,26 @@ const Footer = () => {
 
           {/* 회사 정보 */}
           <div className="lg:col-span-1">
-            <h3 className="font-bold text-lg mb-4">회사</h3>
+            <h3 className="font-bold text-lg mb-4">{text.company}</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  브랜드 소개
+                  {text.about}
                 </Link>
               </li>
               <li>
                 <Link to="/stores" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  매장 안내
+                  {text.stores}
                 </Link>
               </li>
               <li>
                 <Link to="/privacy" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  개인정보처리방침
+                  {text.privacy}
                 </Link>
               </li>
               <li>
                 <Link to="/terms" className="text-muted-foreground hover:text-tue-400 transition-colors">
-                  이용약관
+                  {text.terms}
                 </Link>
               </li>
             </ul>
@@ -111,8 +179,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-muted-foreground/20 mt-10 pt-10 flex flex-col md:flex-row justify-between text-muted-foreground text-sm">
-          <p>© {new Date().getFullYear()} TUE. All rights reserved.</p>
-          <p className="mt-2 md:mt-0">대한민국 & 일본</p>
+          <p>{text.rights}</p>
+          <p className="mt-2 md:mt-0">{text.location}</p>
         </div>
       </div>
     </footer>
